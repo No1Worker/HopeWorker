@@ -22,6 +22,19 @@ allprojects {
     }
 }
 
+ext {
+    compileSdkVersion=26
+    buildToolsVersion="26.0.0"
+    minSdkVersion=15
+    targetSdkVersion=26
+    androidSupportVersion="26.0.0"
+    gsonVersion="2.7"
+    eventbusVersion="3.0.0"
+    greendaoVersion="3.1.1"
+    androidannotationsVersion="4.1.0"
+    okhttpLogVersion = '3.8.0'
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
