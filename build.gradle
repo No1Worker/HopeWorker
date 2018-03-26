@@ -33,6 +33,7 @@ ext {
     greendaoVersion="3.1.1"
     androidannotationsVersion="4.1.0"
     okhttpLogVersion = '3.8.0'
+    eventbusVersion = '3.0.0'
 }
 
 task clean(type: Delete) {

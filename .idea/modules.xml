@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/HopeWorker.iml" filepath="$PROJECT_DIR$/HopeWorker.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/retrofit/retrofit.iml" filepath="$PROJECT_DIR$/retrofit/retrofit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CommonLib/common/common.iml" filepath="$PROJECT_DIR$/CommonLib/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CommonLib/commonLib.iml" filepath="$PROJECT_DIR$/CommonLib/commonLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CommonLib/retrofit/retrofit.iml" filepath="$PROJECT_DIR$/CommonLib/retrofit/retrofit.iml" />
     </modules>
   </component>
 </project>
