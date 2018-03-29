@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/layout_height_title"
+              android:background="@color/title_bar_color">
+
+    <Button
+        android:id="@+id/btnBarBack"
+        android:layout_width="50dip"
+        android:layout_height="match_parent"
+        android:background="@drawable/btn_transparent_selector"
+        android:drawableLeft="@drawable/btn_left_back"
+        android:drawablePadding="10dp"
+        android:onClick="btnBarBack_Click"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <TextView
+        android:id="@+id/tevTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height_title"
+        android:gravity="center|center_vertical"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_title"
+        />
+
+    <Button
+        android:id="@+id/titlerightbtn"
+        android:layout_width="wrap_content"
+        android:minWidth="50dip"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/btn_transparent_selector"
+        android:drawableRight="@drawable/title_more"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_16sp"
+        android:drawablePadding="5dp"
+        android:visibility="gone"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+</RelativeLayout>
