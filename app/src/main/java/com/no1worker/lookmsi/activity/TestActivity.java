@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import com.no1worker.retrofit.callback.MSICallback;
 import com.no1worker.retrofit.common.RetrofitManager;
 import com.no1worker.retrofit.response.MSIBase;
+import com.no1worker.retrofit.service.TestService;
 
 import retrofit2.Call;
 
@@ -19,7 +20,7 @@ public class TestActivity extends Activity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        RetrofitManager.createTestService().getTestMessage("test").enqueue(new MSICallback<String>() {
+        RetrofitManager.createService(TestService.class).getTestMessage("test").enqueue(new MSICallback<String>() {
             @Override
             public void onSuccess(MSIBase<String> msiBaseInfo) {
                 // TODO: 2018/3/22 成功操作 

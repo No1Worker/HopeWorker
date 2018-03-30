@@ -15,17 +15,17 @@ public class RetrofitManager {
 
     private static Map<Class<?>, Object> serviceCache = new ConcurrentHashMap<Class<?>, Object>();
 
-    public static TestService createTestService() {
-        TestService testService = (TestService) serviceCache.get(TestService.class);
-        if (testService == null) {
+    public static <T> T createService(Class<T> service){
+        T target = (T)serviceCache.get(service);
+        if(target == null){
             OkHttpClient client = new OkHttpClient.Builder().addInterceptor(
-                getHeadersLogInterceptor()).addInterceptor(getBodyLogInterceptor()).build();
+                    getHeadersLogInterceptor()).addInterceptor(getBodyLogInterceptor()).build();
             Retrofit retrofit = new Retrofit.Builder().baseUrl("").addConverterFactory(
-                GsonConverterFactory.create()).client(client).build();
-            testService = retrofit.create(TestService.class);
-            serviceCache.put(TestService.class, testService);
+                    GsonConverterFactory.create()).client(client).build();
+            target = retrofit.create(service);
+            serviceCache.put(service, target);
         }
-        return testService;
+        return target;
     }
 
     private static HttpLoggingInterceptor getBodyLogInterceptor() {
