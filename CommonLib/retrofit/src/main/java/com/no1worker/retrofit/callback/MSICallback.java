@@ -17,10 +17,14 @@ public abstract class MSICallback<T> implements Callback<MSIBase<T>> {
              * 注意，这里的成功表示请求成功了，即消息已经和服务器端进行了交互，并且服务器给与了所需要的返回值。
              */
             if (response.body() != null) {
-                // TODO: 2018/3/22 后续与后端指定规则之后进行成功与失败操作
+                if (response.body().getStatus() == 0){
+                    onSuccess(response.body());
+                }else{
+                    onFailure(response.body());
+                }
             }
         } else {
-            // 与后端通信异常
+            onFailure(response.body());
         }
         onFinish();
     }

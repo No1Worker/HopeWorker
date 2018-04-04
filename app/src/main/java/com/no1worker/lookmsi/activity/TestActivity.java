@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import com.no1worker.retrofit.callback.MSICallback;
 import com.no1worker.retrofit.common.RetrofitManager;
 import com.no1worker.retrofit.response.MSIBase;
+import com.no1worker.retrofit.service.MSIService;
 import com.no1worker.retrofit.service.TestService;
 
 import retrofit2.Call;
@@ -31,6 +32,18 @@ public class TestActivity extends Activity{
                 // TODO: 2018/3/22 失败操作
             }
 
+        });
+
+        RetrofitManager.createService(MSIService.class).login("18888888888","123456").enqueue(new MSICallback<String>() {
+            @Override
+            public void onSuccess(MSIBase<String> msiBaseInfo) {
+
+            }
+
+            @Override
+            public void onFailure(MSIBase<String> msiBaseInfo) {
+
+            }
         });
     }
 }
