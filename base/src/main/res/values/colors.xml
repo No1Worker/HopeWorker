@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--标题颜色-->
+    <color name="title_bar_color">#23252f</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <color name="transparent">#0000</color>
+    <!-- 半透明 -->
+    <color name="translucence">#25000000</color>
+
+    <color name="black">#333333</color>
+
+    <color name="grey_2">#999999</color>
+    <color name="grey_11">#e8e8e8</color>
+
+    <color name="blue_3">#569edd</color>
+</resources>

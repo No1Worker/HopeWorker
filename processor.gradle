@@ -1,0 +1,7 @@
+// 将所有的apt插件库统一加入。
+apply plugin: 'com.jakewharton.butterknife'
+def librarys = rootProject.ext.dependencies
+dependencies {
+    annotationProcessor "${librarys.butterknifeApt}"
+    annotationProcessor "${librarys.routerApt}"
+}

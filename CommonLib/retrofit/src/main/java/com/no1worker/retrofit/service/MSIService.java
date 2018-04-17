@@ -1,6 +1,6 @@
 package com.no1worker.retrofit.service;
 
-import com.no1worker.common.bean.UserInfo;
+import com.no1worker.retrofit.entity.UserInfo;
 import com.no1worker.retrofit.response.MSIBase;
 
 import retrofit2.Call;

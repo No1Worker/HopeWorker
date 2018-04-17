@@ -1,5 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
+apply from: "config.gradle"
+
 buildscript {
     
     repositories {
@@ -7,9 +9,9 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.0'
-        
-
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        // 添加此插件支持ButterKnife在Library中使用
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -22,19 +24,19 @@ allprojects {
     }
 }
 
-ext {
-    compileSdkVersion=26
-    buildToolsVersion="26.0.0"
-    minSdkVersion=15
-    targetSdkVersion=26
-    androidSupportVersion="26.0.0"
-    gsonVersion="2.7"
-    eventbusVersion="3.0.0"
-    greendaoVersion="3.1.1"
-    androidannotationsVersion="4.1.0"
-    okhttpLogVersion = '3.8.0'
-    eventbusVersion = '3.0.0'
-}
+//ext {
+//    compileSdkVersion=26
+//    buildToolsVersion="26.0.0"
+//    minSdkVersion=15
+//    targetSdkVersion=26
+//    androidSupportVersion="26.0.0"
+//    gsonVersion="2.7"
+//    eventbusVersion="3.0.0"
+//    greendaoVersion="3.1.1"
+//    androidannotationsVersion="4.1.0"
+//    okhttpLogVersion = '3.8.0'
+//    eventbusVersion = '3.0.0'
+//}
 
 task clean(type: Delete) {
     delete rootProject.buildDir

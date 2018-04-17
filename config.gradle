@@ -1,0 +1,55 @@
+
+ext {
+    android = [
+            compileSdkVersion: 26,
+            minSdkVersion    : 15,
+            targetSdkVersion : 26,
+            versionCode      : 1,
+            versionName      : "1.0"
+    ]
+
+    appId = ["app"  : "com.no1worker.lookmsi",
+             "user"  : "com.no1worker.user",
+
+            ]
+
+    dir = rootProject.rootDir.absolutePath + "/"
+
+    gradles = [
+            processor  :  dir + "processor.gradle",
+    ]
+
+
+    supportLibrary = "26.1.0"
+    support = [
+            appcompatv7  : "com.android.support:appcompat-v7:${supportLibrary}",
+            cardview     : "com.android.support:cardview-v7:${supportLibrary}",
+            design       : "com.android.support:design:${supportLibrary}",
+//            "junit"         : "junit:junit:4.12",
+//            "testrunner"    : "com.android.support.test:runner:1.0.1",
+//            "testespresso"  : "com.android.support.test.espresso:espresso-core:3.0.1",
+    ]
+
+
+    gsonVersion="2.7"
+    eventbusVersion="3.0.0"
+    greendaoVersion="3.1.1"
+    androidannotationsVersion="4.1.0"
+    okhttpLogVersion = "3.8.0"
+    eventbusVersion = "3.0.0"
+    butterknife_version= "8.4.0"
+    routerApi = "1.3.1"
+    routerApt = "1.1.4"
+    dependencies = [
+            eventbus      : "org.greenrobot:eventbus:${eventbusVersion}",
+
+            butterknife     :   "com.jakewharton:butterknife:${butterknife_version}",
+            butterknifeApt  :   "com.jakewharton:butterknife-compiler:${butterknife_version}",
+
+            routerApi       :   "com.alibaba:arouter-api:${routerApi}",
+            routerApt       :   "com.alibaba:arouter-compiler:${routerApt}",
+
+    ]
+
+   // arouter = [api: "com.alibaba:arouter-api:1.3.1",apt: "com.alibaba:arouter-compiler:1.1.4"]
+}

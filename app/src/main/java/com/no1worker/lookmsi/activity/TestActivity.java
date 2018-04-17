@@ -18,9 +18,12 @@ import retrofit2.Call;
 
 public class TestActivity extends Activity{
 
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         RetrofitManager.createService(TestService.class).getTestMessage("test").enqueue(new MSICallback<String>() {
             @Override
             public void onSuccess(MSIBase<String> msiBaseInfo) {
